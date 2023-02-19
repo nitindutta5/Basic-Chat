@@ -2,7 +2,7 @@ import io from "socket.io-client";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { message } from "../store/chatSlice";
-const socket = io('https://socket-io-chat-app-497q.onrender.com/');
+const socket = io(process.env.BACKEND_ENDPOINT);
 const Chat = () => {
   const [msg, setMsg] = useState("");
   const dispatch = useDispatch();
