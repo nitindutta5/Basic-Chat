@@ -9,9 +9,13 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://31b1-111-223-27-240.ngrok.io/",
+    origin: process.env.WEB_APP_ENDPOINT,
     methods: ["GET", "POST"],
   },
+});
+
+app.get("/", (req, res) => {
+  res.send("Welcome to chat backend service!");
 });
 
 io.on("connection", (socket)=>{
