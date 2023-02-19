@@ -32,7 +32,6 @@ const Chat = () => {
           >
             <span className={username === item?.name ? " capsule you" : " capsule other"}>
               {item.message}
-              <br/>
               <small>{item.name}</small>
             </span>
           </p>
