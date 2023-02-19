@@ -9,7 +9,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://socket-io-chat-client.onrender.com/",
+    origin: process.env.WEB_APP_ENDPOINT,
     methods: ["GET", "POST"],
   },
 });
