@@ -13,7 +13,7 @@ const io = new Server(server, {
     methods: ["GET", "POST"],
   },
 });
-
+console.log(process.env.WEB_APP_ENDPOINT)
 app.get("/", (req, res) => {
   res.send("Welcome to chat backend service!");
 });
