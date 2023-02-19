@@ -52,3 +52,9 @@ code {
 .other{
   background: #8672b9;
 }
+
+small{
+  margin-left: 8px;
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.481);
+}
