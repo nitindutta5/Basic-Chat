@@ -1,5 +1,5 @@
 import "./App.css";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import Detail from "./components/Detail";
 import Chat from "./components/Chat";
 

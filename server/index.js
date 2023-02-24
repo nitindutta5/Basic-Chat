@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors')
 const http = require("http");
 const { Server } = require("socket.io");
-
+require("dotenv").config();
 app.use(cors());
 const server = http.createServer(app);
 
@@ -13,7 +13,7 @@ const io = new Server(server, {
     methods: ["GET", "POST"],
   },
 });
-console.log(process.env.WEB_APP_ENDPOINT)
+
 app.get("/", (req, res) => {
   res.send("Welcome to chat backend service!");
 });
